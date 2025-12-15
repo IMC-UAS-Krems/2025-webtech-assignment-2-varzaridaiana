@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HRG.org</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!--Navigation bar -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+      <h1>REBUILD GAZA</h1>
+    
+
+    <ul class="navbar-nav ms-auto align-items-center">
+      <li class="nav-item"><a class="nav-link" href="#cause">Our Cause</a></li>
+      <li class="nav-item"><a class="nav-link" href="#our-items">Items</a></li>
+      <li class="nav-item">
+        <a class="nav-link" onclick="openCart()" style="cursor:pointer;">
+          Cart (<span id="cart-count">0</span>)  
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="top-banner d-flex align-items-center justify-content-center">
+</div>
+
+<div class="our-cause">
+    <h2 id="cause">Our Cause</h2>
+
+    <div class="cause-grid">
+      
+      <div class="left-side">
+        <h3><b>Your Contribution:</b></h3>
+        <ul>
+          <li>Emergency food assistance for families facing hunger</li>
+          <li>Clean drinking water and sanitation support</li>
+          <li>Medical aid and supplies for hospitals and clinics</li>
+          <li>Shelter and essential items for displaced families</li>
+          <li>Support for children, including nutrition and basic care</li>
+        </ul>
+      </div>
+
+      <div class="right-side">
+        <p>
+          The people of Gaza are facing an ongoing humanitarian crisis marked by
+          widespread displacement, shortages of food and clean water, limited
+          access to medical care, and the destruction of homes and essential
+          infrastructure.
+        </p>
+
+        <p>
+          Civilians especially children, women, and the elderly, are the most
+          affected.
+        </p>
+
+        <p>
+          Our cause is rooted in <b>humanity, dignity, and compassion</b>. We aim to
+          provide urgent relief to families who are struggling to meet their most
+          basic needs.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  
+<div class="item-banner d-flex align-items-center justify-content-center">
+</div>
+<!--Products cards-->
+<div class="container my-5" id="shop-section">
+    <h2 class="items-text" id="our-items">Our Items</h2>
+  <div class="row g-4" id="items-list">
+  </div>
+</div>
+
+<!--Cart -->
+<div id="cart-section" class="container d-none my-5 checkout-box">
+  <h3 class="mb-4">Your Donations</h3>
+
+  <ul id="cart-items"></ul>
+
+  <div class="border-top pt-3 mt-3">
+    <p>Subtotal: <strong><span id="cart-subtotal">0</span>$</strong></p>
+    <p id="discount-text" class="text-success d-none">10% discount applied</p>
+    <p class="fs-5">Total: <strong><span id="cart-total">0</span>$</strong></p>
+  </div>
+
+  <button class="btn btn-outline-secondary me-2" onclick="closeCart()">Back</button>
+  <button class="btn btn-dark" onclick="openCheckout()">Checkout</button>
+</div>
+
+<!-- CHechout -->
+<div id="checkout-section" class="container d-none my-5 checkout-box">
+  <h3 class="mb-4 text-center">Checkout</h3>
+
+  <form id="checkout-form">
+    <div class="mb-3">
+      <label class="form-label">Full Name</label>
+      <input type="text" class="form-control">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-control">
+    </div>
+
+    <div class="mb-4">
+      <label class="form-label">Address</label>
+      <input type="text" class="form-control">
+    </div>
+
+    <button class="btn btn-dark w-100 mb-2">Confirm Donation</button>
+    <button type="button" class="btn btn-outline-secondary w-100" onclick="backToCart()">Back</button>
+  </form>
+</div>
+
+
+<div id="confirmation-section" class="container d-none my-5 text-center">
+  <h3>Thank you for your donation!</h3>
+  <p>You made a real difference.</p>
+</div>
+
+<footer class="footer mt-5">
+  <div class="container text-center">
+    <p><a href="mailto:contact@helpgaza.org">contact@helpgaza.org</a></p>
+    <p>+40 700 000 000</p>
+    <p class="small">© 2025 Help Rebuild Gaza</p>
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
